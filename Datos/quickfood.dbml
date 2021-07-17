@@ -1,4 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="quickFoodDB" Class="quickfoodDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+<<<<<<< HEAD
   <Connection Mode="AppSettings" ConnectionString="Data Source=localhost;Initial Catalog=quickFoodDB;Persist Security Info=True;User ID=sa" SettingsObjectName="QuickFood.Properties.Settings" SettingsPropertyName="quickFoodDBConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="dbo.plato" Member="plato">
     <Type Name="plato">
@@ -17,6 +18,25 @@
       <Column Name="pdeCantidad" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Association Name="plato_pedidodetalle" Member="plato" ThisKey="pltId" OtherKey="pltId" Type="plato" IsForeignKey="true" />
       <Association Name="pedido_pedidodetalle" Member="pedido" ThisKey="pddId" OtherKey="pddId" Type="pedido" IsForeignKey="true" />
+=======
+  <Connection Mode="AppSettings" ConnectionString="Data Source=localhost;Initial Catalog=quickFoodDB;Integrated Security=True" SettingsObjectName="QuickFood.Properties.Settings" SettingsPropertyName="quickFoodDBConnectionString2" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.cliente" Member="cliente">
+    <Type Name="cliente">
+      <Column Name="cltId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="cltNombre" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="cltTelefono" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="cltDireccion" Type="System.String" DbType="VarChar(300)" CanBeNull="true" />
+      <Column Name="cltIdentificacion" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Association Name="cliente_pedido" Member="pedido" ThisKey="cltId" OtherKey="cltId" Type="pedido" />
+    </Type>
+  </Table>
+  <Table Name="dbo.mesero" Member="mesero">
+    <Type Name="mesero">
+      <Column Name="msrId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="msrNombre" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="msrIdentificacion" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Association Name="mesero_pedido" Member="pedido" ThisKey="msrId" OtherKey="msrId" Type="pedido" />
+>>>>>>> bb2f69cfbd9c0cecb4c09413b37b46cce23e68fb
     </Type>
   </Table>
   <Table Name="dbo.pedido" Member="pedido">
@@ -28,26 +48,28 @@
       <Column Name="msrId" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="pddTotal" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
       <Association Name="pedido_pedidodetalle" Member="pedidodetalle" ThisKey="pddId" OtherKey="pddId" Type="pedidodetalle" />
-      <Association Name="mesero_pedido" Member="mesero" ThisKey="msrId" OtherKey="msrId" Type="mesero" IsForeignKey="true" />
       <Association Name="cliente_pedido" Member="cliente" ThisKey="cltId" OtherKey="cltId" Type="cliente" IsForeignKey="true" />
+      <Association Name="mesero_pedido" Member="mesero" ThisKey="msrId" OtherKey="msrId" Type="mesero" IsForeignKey="true" />
     </Type>
   </Table>
-  <Table Name="dbo.mesero" Member="mesero">
-    <Type Name="mesero">
-      <Column Name="msrId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="msrNombre" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
-      <Column Name="msrIdentificacion" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
-      <Association Name="mesero_pedido" Member="pedido" ThisKey="msrId" OtherKey="msrId" Type="pedido" />
+  <Table Name="dbo.pedidodetalle" Member="pedidodetalle">
+    <Type Name="pedidodetalle">
+      <Column Name="pdeId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="pdeDescripcion" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="pddId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="pltId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="pdeCantidad" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="pedido_pedidodetalle" Member="pedido" ThisKey="pddId" OtherKey="pddId" Type="pedido" IsForeignKey="true" />
+      <Association Name="plato_pedidodetalle" Member="plato" ThisKey="pltId" OtherKey="pltId" Type="plato" IsForeignKey="true" />
     </Type>
   </Table>
-  <Table Name="dbo.cliente" Member="cliente">
-    <Type Name="cliente">
-      <Column Name="cltId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="cltNombre" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
-      <Column Name="cltTelefono" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
-      <Column Name="cltDireccion" Type="System.String" DbType="VarChar(300)" CanBeNull="true" />
-      <Column Name="cltIdentificacion" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
-      <Association Name="cliente_pedido" Member="pedido" ThisKey="cltId" OtherKey="cltId" Type="pedido" />
+  <Table Name="dbo.plato" Member="plato">
+    <Type Name="plato">
+      <Column Name="pltId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="pltDescripcion" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="pltEstado" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="pltPrecio" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Association Name="plato_pedidodetalle" Member="pedidodetalle" ThisKey="pltId" OtherKey="pltId" Type="pedidodetalle" />
     </Type>
   </Table>
 </Database>

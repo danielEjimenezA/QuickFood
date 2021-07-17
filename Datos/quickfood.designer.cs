@@ -30,25 +30,25 @@ namespace QuickFood.Datos
 		
     #region Definiciones de métodos de extensibilidad
     partial void OnCreated();
-    partial void Insertplato(plato instance);
-    partial void Updateplato(plato instance);
-    partial void Deleteplato(plato instance);
-    partial void Insertpedidodetalle(pedidodetalle instance);
-    partial void Updatepedidodetalle(pedidodetalle instance);
-    partial void Deletepedidodetalle(pedidodetalle instance);
-    partial void Insertpedido(pedido instance);
-    partial void Updatepedido(pedido instance);
-    partial void Deletepedido(pedido instance);
-    partial void Insertmesero(mesero instance);
-    partial void Updatemesero(mesero instance);
-    partial void Deletemesero(mesero instance);
     partial void Insertcliente(cliente instance);
     partial void Updatecliente(cliente instance);
     partial void Deletecliente(cliente instance);
+    partial void Insertmesero(mesero instance);
+    partial void Updatemesero(mesero instance);
+    partial void Deletemesero(mesero instance);
+    partial void Insertpedido(pedido instance);
+    partial void Updatepedido(pedido instance);
+    partial void Deletepedido(pedido instance);
+    partial void Insertpedidodetalle(pedidodetalle instance);
+    partial void Updatepedidodetalle(pedidodetalle instance);
+    partial void Deletepedidodetalle(pedidodetalle instance);
+    partial void Insertplato(plato instance);
+    partial void Updateplato(plato instance);
+    partial void Deleteplato(plato instance);
     #endregion
 		
 		public quickfoodDataContext() : 
-				base(global::QuickFood.Properties.Settings.Default.quickFoodDBConnectionString, mappingSource)
+				base(global::QuickFood.Properties.Settings.Default.quickFoodDBConnectionString2, mappingSource)
 		{
 			OnCreated();
 		}
@@ -77,27 +77,11 @@ namespace QuickFood.Datos
 			OnCreated();
 		}
 		
-		public System.Data.Linq.Table<plato> plato
+		public System.Data.Linq.Table<cliente> cliente
 		{
 			get
 			{
-				return this.GetTable<plato>();
-			}
-		}
-		
-		public System.Data.Linq.Table<pedidodetalle> pedidodetalle
-		{
-			get
-			{
-				return this.GetTable<pedidodetalle>();
-			}
-		}
-		
-		public System.Data.Linq.Table<pedido> pedido
-		{
-			get
-			{
-				return this.GetTable<pedido>();
+				return this.GetTable<cliente>();
 			}
 		}
 		
@@ -109,87 +93,125 @@ namespace QuickFood.Datos
 			}
 		}
 		
-		public System.Data.Linq.Table<cliente> cliente
+		public System.Data.Linq.Table<pedido> pedido
 		{
 			get
 			{
-				return this.GetTable<cliente>();
+				return this.GetTable<pedido>();
+			}
+		}
+		
+		public System.Data.Linq.Table<pedidodetalle> pedidodetalle
+		{
+			get
+			{
+				return this.GetTable<pedidodetalle>();
+			}
+		}
+		
+		public System.Data.Linq.Table<plato> plato
+		{
+			get
+			{
+				return this.GetTable<plato>();
 			}
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.plato")]
-	public partial class plato : INotifyPropertyChanging, INotifyPropertyChanged
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.cliente")]
+	public partial class cliente : INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
-		private int _pltId;
+		private int _cltId;
 		
-		private string _pltDescripcion;
+		private string _cltNombre;
 		
+<<<<<<< HEAD
 		private System.Nullable<decimal> _pltPrecio;
+=======
+		private string _cltTelefono;
+>>>>>>> bb2f69cfbd9c0cecb4c09413b37b46cce23e68fb
 		
-		private EntitySet<pedidodetalle> _pedidodetalle;
+		private string _cltDireccion;
+		
+		private string _cltIdentificacion;
+		
+		private EntitySet<pedido> _pedido;
 		
     #region Definiciones de métodos de extensibilidad
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
+<<<<<<< HEAD
     partial void OnpltIdChanging(int value);
     partial void OnpltIdChanged();
     partial void OnpltDescripcionChanging(string value);
     partial void OnpltDescripcionChanged();
     partial void OnpltPrecioChanging(System.Nullable<decimal> value);
     partial void OnpltPrecioChanged();
+=======
+    partial void OncltIdChanging(int value);
+    partial void OncltIdChanged();
+    partial void OncltNombreChanging(string value);
+    partial void OncltNombreChanged();
+    partial void OncltTelefonoChanging(string value);
+    partial void OncltTelefonoChanged();
+    partial void OncltDireccionChanging(string value);
+    partial void OncltDireccionChanged();
+    partial void OncltIdentificacionChanging(string value);
+    partial void OncltIdentificacionChanged();
+>>>>>>> bb2f69cfbd9c0cecb4c09413b37b46cce23e68fb
     #endregion
 		
-		public plato()
+		public cliente()
 		{
-			this._pedidodetalle = new EntitySet<pedidodetalle>(new Action<pedidodetalle>(this.attach_pedidodetalle), new Action<pedidodetalle>(this.detach_pedidodetalle));
+			this._pedido = new EntitySet<pedido>(new Action<pedido>(this.attach_pedido), new Action<pedido>(this.detach_pedido));
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_pltId", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int pltId
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_cltId", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int cltId
 		{
 			get
 			{
-				return this._pltId;
+				return this._cltId;
 			}
 			set
 			{
-				if ((this._pltId != value))
+				if ((this._cltId != value))
 				{
-					this.OnpltIdChanging(value);
+					this.OncltIdChanging(value);
 					this.SendPropertyChanging();
-					this._pltId = value;
-					this.SendPropertyChanged("pltId");
-					this.OnpltIdChanged();
+					this._cltId = value;
+					this.SendPropertyChanged("cltId");
+					this.OncltIdChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_pltDescripcion", DbType="VarChar(200)")]
-		public string pltDescripcion
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_cltNombre", DbType="VarChar(200)")]
+		public string cltNombre
 		{
 			get
 			{
-				return this._pltDescripcion;
+				return this._cltNombre;
 			}
 			set
 			{
-				if ((this._pltDescripcion != value))
+				if ((this._cltNombre != value))
 				{
-					this.OnpltDescripcionChanging(value);
+					this.OncltNombreChanging(value);
 					this.SendPropertyChanging();
-					this._pltDescripcion = value;
-					this.SendPropertyChanged("pltDescripcion");
-					this.OnpltDescripcionChanged();
+					this._cltNombre = value;
+					this.SendPropertyChanged("cltNombre");
+					this.OncltNombreChanged();
 				}
 			}
 		}
 		
+<<<<<<< HEAD
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_pltPrecio", DbType="Decimal(18,2)")]
 		public System.Nullable<decimal> pltPrecio
 		{
@@ -206,20 +228,78 @@ namespace QuickFood.Datos
 					this._pltPrecio = value;
 					this.SendPropertyChanged("pltPrecio");
 					this.OnpltPrecioChanged();
+=======
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_cltTelefono", DbType="VarChar(20)")]
+		public string cltTelefono
+		{
+			get
+			{
+				return this._cltTelefono;
+			}
+			set
+			{
+				if ((this._cltTelefono != value))
+				{
+					this.OncltTelefonoChanging(value);
+					this.SendPropertyChanging();
+					this._cltTelefono = value;
+					this.SendPropertyChanged("cltTelefono");
+					this.OncltTelefonoChanged();
+>>>>>>> bb2f69cfbd9c0cecb4c09413b37b46cce23e68fb
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="plato_pedidodetalle", Storage="_pedidodetalle", ThisKey="pltId", OtherKey="pltId")]
-		public EntitySet<pedidodetalle> pedidodetalle
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_cltDireccion", DbType="VarChar(300)")]
+		public string cltDireccion
 		{
 			get
 			{
-				return this._pedidodetalle;
+				return this._cltDireccion;
 			}
 			set
 			{
-				this._pedidodetalle.Assign(value);
+				if ((this._cltDireccion != value))
+				{
+					this.OncltDireccionChanging(value);
+					this.SendPropertyChanging();
+					this._cltDireccion = value;
+					this.SendPropertyChanged("cltDireccion");
+					this.OncltDireccionChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_cltIdentificacion", DbType="VarChar(20)")]
+		public string cltIdentificacion
+		{
+			get
+			{
+				return this._cltIdentificacion;
+			}
+			set
+			{
+				if ((this._cltIdentificacion != value))
+				{
+					this.OncltIdentificacionChanging(value);
+					this.SendPropertyChanging();
+					this._cltIdentificacion = value;
+					this.SendPropertyChanged("cltIdentificacion");
+					this.OncltIdentificacionChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="cliente_pedido", Storage="_pedido", ThisKey="cltId", OtherKey="cltId")]
+		public EntitySet<pedido> pedido
+		{
+			get
+			{
+				return this._pedido;
+			}
+			set
+			{
+				this._pedido.Assign(value);
 			}
 		}
 		
@@ -243,43 +323,44 @@ namespace QuickFood.Datos
 			}
 		}
 		
-		private void attach_pedidodetalle(pedidodetalle entity)
+		private void attach_pedido(pedido entity)
 		{
 			this.SendPropertyChanging();
-			entity.plato = this;
+			entity.cliente = this;
 		}
 		
-		private void detach_pedidodetalle(pedidodetalle entity)
+		private void detach_pedido(pedido entity)
 		{
 			this.SendPropertyChanging();
-			entity.plato = null;
+			entity.cliente = null;
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.pedidodetalle")]
-	public partial class pedidodetalle : INotifyPropertyChanging, INotifyPropertyChanged
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.mesero")]
+	public partial class mesero : INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
-		private int _pdeId;
+		private int _msrId;
 		
-		private string _pdeDescripcion;
+		private string _msrNombre;
 		
-		private System.Nullable<int> _pddId;
-		
-		private System.Nullable<int> _pltId;
-		
+<<<<<<< HEAD
 		private System.Nullable<int> _pdeCantidad;
 		
 		private EntityRef<plato> _plato;
+=======
+		private string _msrIdentificacion;
+>>>>>>> bb2f69cfbd9c0cecb4c09413b37b46cce23e68fb
 		
-		private EntityRef<pedido> _pedido;
+		private EntitySet<pedido> _pedido;
 		
     #region Definiciones de métodos de extensibilidad
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
+<<<<<<< HEAD
     partial void OnpdeIdChanging(int value);
     partial void OnpdeIdChanged();
     partial void OnpdeDescripcionChanging(string value);
@@ -290,64 +371,72 @@ namespace QuickFood.Datos
     partial void OnpltIdChanged();
     partial void OnpdeCantidadChanging(System.Nullable<int> value);
     partial void OnpdeCantidadChanged();
+=======
+    partial void OnmsrIdChanging(int value);
+    partial void OnmsrIdChanged();
+    partial void OnmsrNombreChanging(string value);
+    partial void OnmsrNombreChanged();
+    partial void OnmsrIdentificacionChanging(string value);
+    partial void OnmsrIdentificacionChanged();
+>>>>>>> bb2f69cfbd9c0cecb4c09413b37b46cce23e68fb
     #endregion
 		
-		public pedidodetalle()
+		public mesero()
 		{
-			this._plato = default(EntityRef<plato>);
-			this._pedido = default(EntityRef<pedido>);
+			this._pedido = new EntitySet<pedido>(new Action<pedido>(this.attach_pedido), new Action<pedido>(this.detach_pedido));
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_pdeId", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int pdeId
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_msrId", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int msrId
 		{
 			get
 			{
-				return this._pdeId;
+				return this._msrId;
 			}
 			set
 			{
-				if ((this._pdeId != value))
+				if ((this._msrId != value))
 				{
-					this.OnpdeIdChanging(value);
+					this.OnmsrIdChanging(value);
 					this.SendPropertyChanging();
-					this._pdeId = value;
-					this.SendPropertyChanged("pdeId");
-					this.OnpdeIdChanged();
+					this._msrId = value;
+					this.SendPropertyChanged("msrId");
+					this.OnmsrIdChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_pdeDescripcion", DbType="VarChar(255)")]
-		public string pdeDescripcion
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_msrNombre", DbType="VarChar(200)")]
+		public string msrNombre
 		{
 			get
 			{
-				return this._pdeDescripcion;
+				return this._msrNombre;
 			}
 			set
 			{
-				if ((this._pdeDescripcion != value))
+				if ((this._msrNombre != value))
 				{
-					this.OnpdeDescripcionChanging(value);
+					this.OnmsrNombreChanging(value);
 					this.SendPropertyChanging();
-					this._pdeDescripcion = value;
-					this.SendPropertyChanged("pdeDescripcion");
-					this.OnpdeDescripcionChanged();
+					this._msrNombre = value;
+					this.SendPropertyChanged("msrNombre");
+					this.OnmsrNombreChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_pddId", DbType="Int")]
-		public System.Nullable<int> pddId
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_msrIdentificacion", DbType="VarChar(20)")]
+		public string msrIdentificacion
 		{
 			get
 			{
-				return this._pddId;
+				return this._msrIdentificacion;
 			}
 			set
 			{
+<<<<<<< HEAD
 				if ((this._pddId != value))
 				{
 					if (this._pedido.HasLoadedOrAssignedValue)
@@ -419,59 +508,29 @@ namespace QuickFood.Datos
 				plato previousValue = this._plato.Entity;
 				if (((previousValue != value) 
 							|| (this._plato.HasLoadedOrAssignedValue == false)))
+=======
+				if ((this._msrIdentificacion != value))
+>>>>>>> bb2f69cfbd9c0cecb4c09413b37b46cce23e68fb
 				{
+					this.OnmsrIdentificacionChanging(value);
 					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._plato.Entity = null;
-						previousValue.pedidodetalle.Remove(this);
-					}
-					this._plato.Entity = value;
-					if ((value != null))
-					{
-						value.pedidodetalle.Add(this);
-						this._pltId = value.pltId;
-					}
-					else
-					{
-						this._pltId = default(Nullable<int>);
-					}
-					this.SendPropertyChanged("plato");
+					this._msrIdentificacion = value;
+					this.SendPropertyChanged("msrIdentificacion");
+					this.OnmsrIdentificacionChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="pedido_pedidodetalle", Storage="_pedido", ThisKey="pddId", OtherKey="pddId", IsForeignKey=true)]
-		public pedido pedido
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="mesero_pedido", Storage="_pedido", ThisKey="msrId", OtherKey="msrId")]
+		public EntitySet<pedido> pedido
 		{
 			get
 			{
-				return this._pedido.Entity;
+				return this._pedido;
 			}
 			set
 			{
-				pedido previousValue = this._pedido.Entity;
-				if (((previousValue != value) 
-							|| (this._pedido.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._pedido.Entity = null;
-						previousValue.pedidodetalle.Remove(this);
-					}
-					this._pedido.Entity = value;
-					if ((value != null))
-					{
-						value.pedidodetalle.Add(this);
-						this._pddId = value.pddId;
-					}
-					else
-					{
-						this._pddId = default(Nullable<int>);
-					}
-					this.SendPropertyChanged("pedido");
-				}
+				this._pedido.Assign(value);
 			}
 		}
 		
@@ -494,6 +553,18 @@ namespace QuickFood.Datos
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
 		}
+		
+		private void attach_pedido(pedido entity)
+		{
+			this.SendPropertyChanging();
+			entity.mesero = this;
+		}
+		
+		private void detach_pedido(pedido entity)
+		{
+			this.SendPropertyChanging();
+			entity.mesero = null;
+		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.pedido")]
@@ -513,12 +584,17 @@ namespace QuickFood.Datos
 		private System.Nullable<int> _msrId;
 		
 		private System.Nullable<decimal> _pddTotal;
+<<<<<<< HEAD
+		
+		private EntitySet<pedidodetalle> _pedidodetalle;
+=======
+>>>>>>> bb2f69cfbd9c0cecb4c09413b37b46cce23e68fb
 		
 		private EntitySet<pedidodetalle> _pedidodetalle;
 		
-		private EntityRef<mesero> _mesero;
-		
 		private EntityRef<cliente> _cliente;
+		
+		private EntityRef<mesero> _mesero;
 		
     #region Definiciones de métodos de extensibilidad
     partial void OnLoaded();
@@ -541,8 +617,8 @@ namespace QuickFood.Datos
 		public pedido()
 		{
 			this._pedidodetalle = new EntitySet<pedidodetalle>(new Action<pedidodetalle>(this.attach_pedidodetalle), new Action<pedidodetalle>(this.detach_pedidodetalle));
-			this._mesero = default(EntityRef<mesero>);
 			this._cliente = default(EntityRef<cliente>);
+			this._mesero = default(EntityRef<mesero>);
 			OnCreated();
 		}
 		
@@ -687,40 +763,6 @@ namespace QuickFood.Datos
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="mesero_pedido", Storage="_mesero", ThisKey="msrId", OtherKey="msrId", IsForeignKey=true)]
-		public mesero mesero
-		{
-			get
-			{
-				return this._mesero.Entity;
-			}
-			set
-			{
-				mesero previousValue = this._mesero.Entity;
-				if (((previousValue != value) 
-							|| (this._mesero.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._mesero.Entity = null;
-						previousValue.pedido.Remove(this);
-					}
-					this._mesero.Entity = value;
-					if ((value != null))
-					{
-						value.pedido.Add(this);
-						this._msrId = value.msrId;
-					}
-					else
-					{
-						this._msrId = default(Nullable<int>);
-					}
-					this.SendPropertyChanged("mesero");
-				}
-			}
-		}
-		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="cliente_pedido", Storage="_cliente", ThisKey="cltId", OtherKey="cltId", IsForeignKey=true)]
 		public cliente cliente
 		{
@@ -751,6 +793,40 @@ namespace QuickFood.Datos
 						this._cltId = default(Nullable<int>);
 					}
 					this.SendPropertyChanged("cliente");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="mesero_pedido", Storage="_mesero", ThisKey="msrId", OtherKey="msrId", IsForeignKey=true)]
+		public mesero mesero
+		{
+			get
+			{
+				return this._mesero.Entity;
+			}
+			set
+			{
+				mesero previousValue = this._mesero.Entity;
+				if (((previousValue != value) 
+							|| (this._mesero.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._mesero.Entity = null;
+						previousValue.pedido.Remove(this);
+					}
+					this._mesero.Entity = value;
+					if ((value != null))
+					{
+						value.pedido.Add(this);
+						this._msrId = value.msrId;
+					}
+					else
+					{
+						this._msrId = default(Nullable<int>);
+					}
+					this.SendPropertyChanged("mesero");
 				}
 			}
 		}
@@ -788,108 +864,222 @@ namespace QuickFood.Datos
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.mesero")]
-	public partial class mesero : INotifyPropertyChanging, INotifyPropertyChanged
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.pedidodetalle")]
+	public partial class pedidodetalle : INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
-		private int _msrId;
+		private int _pdeId;
 		
-		private string _msrNombre;
+		private string _pdeDescripcion;
 		
-		private string _msrIdentificacion;
+		private System.Nullable<int> _pddId;
 		
-		private EntitySet<pedido> _pedido;
+		private System.Nullable<int> _pltId;
+		
+		private System.Nullable<int> _pdeCantidad;
+		
+		private EntityRef<pedido> _pedido;
+		
+		private EntityRef<plato> _plato;
 		
     #region Definiciones de métodos de extensibilidad
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
-    partial void OnmsrIdChanging(int value);
-    partial void OnmsrIdChanged();
-    partial void OnmsrNombreChanging(string value);
-    partial void OnmsrNombreChanged();
-    partial void OnmsrIdentificacionChanging(string value);
-    partial void OnmsrIdentificacionChanged();
+    partial void OnpdeIdChanging(int value);
+    partial void OnpdeIdChanged();
+    partial void OnpdeDescripcionChanging(string value);
+    partial void OnpdeDescripcionChanged();
+    partial void OnpddIdChanging(System.Nullable<int> value);
+    partial void OnpddIdChanged();
+    partial void OnpltIdChanging(System.Nullable<int> value);
+    partial void OnpltIdChanged();
+    partial void OnpdeCantidadChanging(System.Nullable<int> value);
+    partial void OnpdeCantidadChanged();
     #endregion
 		
-		public mesero()
+		public pedidodetalle()
 		{
-			this._pedido = new EntitySet<pedido>(new Action<pedido>(this.attach_pedido), new Action<pedido>(this.detach_pedido));
+			this._pedido = default(EntityRef<pedido>);
+			this._plato = default(EntityRef<plato>);
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_msrId", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int msrId
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_pdeId", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int pdeId
 		{
 			get
 			{
-				return this._msrId;
+				return this._pdeId;
 			}
 			set
 			{
-				if ((this._msrId != value))
+				if ((this._pdeId != value))
 				{
-					this.OnmsrIdChanging(value);
+					this.OnpdeIdChanging(value);
 					this.SendPropertyChanging();
-					this._msrId = value;
-					this.SendPropertyChanged("msrId");
-					this.OnmsrIdChanged();
+					this._pdeId = value;
+					this.SendPropertyChanged("pdeId");
+					this.OnpdeIdChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_msrNombre", DbType="VarChar(200)")]
-		public string msrNombre
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_pdeDescripcion", DbType="VarChar(255)")]
+		public string pdeDescripcion
 		{
 			get
 			{
-				return this._msrNombre;
+				return this._pdeDescripcion;
 			}
 			set
 			{
-				if ((this._msrNombre != value))
+				if ((this._pdeDescripcion != value))
 				{
-					this.OnmsrNombreChanging(value);
+					this.OnpdeDescripcionChanging(value);
 					this.SendPropertyChanging();
-					this._msrNombre = value;
-					this.SendPropertyChanged("msrNombre");
-					this.OnmsrNombreChanged();
+					this._pdeDescripcion = value;
+					this.SendPropertyChanged("pdeDescripcion");
+					this.OnpdeDescripcionChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_msrIdentificacion", DbType="VarChar(20)")]
-		public string msrIdentificacion
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_pddId", DbType="Int")]
+		public System.Nullable<int> pddId
 		{
 			get
 			{
-				return this._msrIdentificacion;
+				return this._pddId;
 			}
 			set
 			{
-				if ((this._msrIdentificacion != value))
+				if ((this._pddId != value))
 				{
-					this.OnmsrIdentificacionChanging(value);
+					if (this._pedido.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnpddIdChanging(value);
 					this.SendPropertyChanging();
-					this._msrIdentificacion = value;
-					this.SendPropertyChanged("msrIdentificacion");
-					this.OnmsrIdentificacionChanged();
+					this._pddId = value;
+					this.SendPropertyChanged("pddId");
+					this.OnpddIdChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="mesero_pedido", Storage="_pedido", ThisKey="msrId", OtherKey="msrId")]
-		public EntitySet<pedido> pedido
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_pltId", DbType="Int")]
+		public System.Nullable<int> pltId
 		{
 			get
 			{
-				return this._pedido;
+				return this._pltId;
 			}
 			set
 			{
-				this._pedido.Assign(value);
+				if ((this._pltId != value))
+				{
+					if (this._plato.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnpltIdChanging(value);
+					this.SendPropertyChanging();
+					this._pltId = value;
+					this.SendPropertyChanged("pltId");
+					this.OnpltIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_pdeCantidad", DbType="Int")]
+		public System.Nullable<int> pdeCantidad
+		{
+			get
+			{
+				return this._pdeCantidad;
+			}
+			set
+			{
+				if ((this._pdeCantidad != value))
+				{
+					this.OnpdeCantidadChanging(value);
+					this.SendPropertyChanging();
+					this._pdeCantidad = value;
+					this.SendPropertyChanged("pdeCantidad");
+					this.OnpdeCantidadChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="pedido_pedidodetalle", Storage="_pedido", ThisKey="pddId", OtherKey="pddId", IsForeignKey=true)]
+		public pedido pedido
+		{
+			get
+			{
+				return this._pedido.Entity;
+			}
+			set
+			{
+				pedido previousValue = this._pedido.Entity;
+				if (((previousValue != value) 
+							|| (this._pedido.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._pedido.Entity = null;
+						previousValue.pedidodetalle.Remove(this);
+					}
+					this._pedido.Entity = value;
+					if ((value != null))
+					{
+						value.pedidodetalle.Add(this);
+						this._pddId = value.pddId;
+					}
+					else
+					{
+						this._pddId = default(Nullable<int>);
+					}
+					this.SendPropertyChanged("pedido");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="plato_pedidodetalle", Storage="_plato", ThisKey="pltId", OtherKey="pltId", IsForeignKey=true)]
+		public plato plato
+		{
+			get
+			{
+				return this._plato.Entity;
+			}
+			set
+			{
+				plato previousValue = this._plato.Entity;
+				if (((previousValue != value) 
+							|| (this._plato.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._plato.Entity = null;
+						previousValue.pedidodetalle.Remove(this);
+					}
+					this._plato.Entity = value;
+					if ((value != null))
+					{
+						value.pedidodetalle.Add(this);
+						this._pltId = value.pltId;
+					}
+					else
+					{
+						this._pltId = default(Nullable<int>);
+					}
+					this.SendPropertyChanged("plato");
+				}
 			}
 		}
 		
@@ -911,171 +1101,135 @@ namespace QuickFood.Datos
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
-		}
-		
-		private void attach_pedido(pedido entity)
-		{
-			this.SendPropertyChanging();
-			entity.mesero = this;
-		}
-		
-		private void detach_pedido(pedido entity)
-		{
-			this.SendPropertyChanging();
-			entity.mesero = null;
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.cliente")]
-	public partial class cliente : INotifyPropertyChanging, INotifyPropertyChanged
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.plato")]
+	public partial class plato : INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
-		private int _cltId;
+		private int _pltId;
 		
-		private string _cltNombre;
+		private string _pltDescripcion;
 		
-		private string _cltTelefono;
+		private System.Nullable<char> _pltEstado;
 		
-		private string _cltDireccion;
+		private System.Nullable<decimal> _pltPrecio;
 		
-		private string _cltIdentificacion;
-		
-		private EntitySet<pedido> _pedido;
+		private EntitySet<pedidodetalle> _pedidodetalle;
 		
     #region Definiciones de métodos de extensibilidad
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
-    partial void OncltIdChanging(int value);
-    partial void OncltIdChanged();
-    partial void OncltNombreChanging(string value);
-    partial void OncltNombreChanged();
-    partial void OncltTelefonoChanging(string value);
-    partial void OncltTelefonoChanged();
-    partial void OncltDireccionChanging(string value);
-    partial void OncltDireccionChanged();
-    partial void OncltIdentificacionChanging(string value);
-    partial void OncltIdentificacionChanged();
+    partial void OnpltIdChanging(int value);
+    partial void OnpltIdChanged();
+    partial void OnpltDescripcionChanging(string value);
+    partial void OnpltDescripcionChanged();
+    partial void OnpltEstadoChanging(System.Nullable<char> value);
+    partial void OnpltEstadoChanged();
+    partial void OnpltPrecioChanging(System.Nullable<decimal> value);
+    partial void OnpltPrecioChanged();
     #endregion
 		
-		public cliente()
+		public plato()
 		{
-			this._pedido = new EntitySet<pedido>(new Action<pedido>(this.attach_pedido), new Action<pedido>(this.detach_pedido));
+			this._pedidodetalle = new EntitySet<pedidodetalle>(new Action<pedidodetalle>(this.attach_pedidodetalle), new Action<pedidodetalle>(this.detach_pedidodetalle));
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_cltId", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int cltId
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_pltId", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int pltId
 		{
 			get
 			{
-				return this._cltId;
+				return this._pltId;
 			}
 			set
 			{
-				if ((this._cltId != value))
+				if ((this._pltId != value))
 				{
-					this.OncltIdChanging(value);
+					this.OnpltIdChanging(value);
 					this.SendPropertyChanging();
-					this._cltId = value;
-					this.SendPropertyChanged("cltId");
-					this.OncltIdChanged();
+					this._pltId = value;
+					this.SendPropertyChanged("pltId");
+					this.OnpltIdChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_cltNombre", DbType="VarChar(200)")]
-		public string cltNombre
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_pltDescripcion", DbType="VarChar(200)")]
+		public string pltDescripcion
 		{
 			get
 			{
-				return this._cltNombre;
+				return this._pltDescripcion;
 			}
 			set
 			{
-				if ((this._cltNombre != value))
+				if ((this._pltDescripcion != value))
 				{
-					this.OncltNombreChanging(value);
+					this.OnpltDescripcionChanging(value);
 					this.SendPropertyChanging();
-					this._cltNombre = value;
-					this.SendPropertyChanged("cltNombre");
-					this.OncltNombreChanged();
+					this._pltDescripcion = value;
+					this.SendPropertyChanged("pltDescripcion");
+					this.OnpltDescripcionChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_cltTelefono", DbType="VarChar(20)")]
-		public string cltTelefono
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_pltEstado", DbType="Char(1)")]
+		public System.Nullable<char> pltEstado
 		{
 			get
 			{
-				return this._cltTelefono;
+				return this._pltEstado;
 			}
 			set
 			{
-				if ((this._cltTelefono != value))
+				if ((this._pltEstado != value))
 				{
-					this.OncltTelefonoChanging(value);
+					this.OnpltEstadoChanging(value);
 					this.SendPropertyChanging();
-					this._cltTelefono = value;
-					this.SendPropertyChanged("cltTelefono");
-					this.OncltTelefonoChanged();
+					this._pltEstado = value;
+					this.SendPropertyChanged("pltEstado");
+					this.OnpltEstadoChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_cltDireccion", DbType="VarChar(300)")]
-		public string cltDireccion
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_pltPrecio", DbType="Decimal(18,2)")]
+		public System.Nullable<decimal> pltPrecio
 		{
 			get
 			{
-				return this._cltDireccion;
+				return this._pltPrecio;
 			}
 			set
 			{
-				if ((this._cltDireccion != value))
+				if ((this._pltPrecio != value))
 				{
-					this.OncltDireccionChanging(value);
+					this.OnpltPrecioChanging(value);
 					this.SendPropertyChanging();
-					this._cltDireccion = value;
-					this.SendPropertyChanged("cltDireccion");
-					this.OncltDireccionChanged();
+					this._pltPrecio = value;
+					this.SendPropertyChanged("pltPrecio");
+					this.OnpltPrecioChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_cltIdentificacion", DbType="VarChar(20)")]
-		public string cltIdentificacion
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="plato_pedidodetalle", Storage="_pedidodetalle", ThisKey="pltId", OtherKey="pltId")]
+		public EntitySet<pedidodetalle> pedidodetalle
 		{
 			get
 			{
-				return this._cltIdentificacion;
+				return this._pedidodetalle;
 			}
 			set
 			{
-				if ((this._cltIdentificacion != value))
-				{
-					this.OncltIdentificacionChanging(value);
-					this.SendPropertyChanging();
-					this._cltIdentificacion = value;
-					this.SendPropertyChanged("cltIdentificacion");
-					this.OncltIdentificacionChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="cliente_pedido", Storage="_pedido", ThisKey="cltId", OtherKey="cltId")]
-		public EntitySet<pedido> pedido
-		{
-			get
-			{
-				return this._pedido;
-			}
-			set
-			{
-				this._pedido.Assign(value);
+				this._pedidodetalle.Assign(value);
 			}
 		}
 		
@@ -1099,16 +1253,16 @@ namespace QuickFood.Datos
 			}
 		}
 		
-		private void attach_pedido(pedido entity)
+		private void attach_pedidodetalle(pedidodetalle entity)
 		{
 			this.SendPropertyChanging();
-			entity.cliente = this;
+			entity.plato = this;
 		}
 		
-		private void detach_pedido(pedido entity)
+		private void detach_pedidodetalle(pedidodetalle entity)
 		{
 			this.SendPropertyChanging();
-			entity.cliente = null;
+			entity.plato = null;
 		}
 	}
 }
