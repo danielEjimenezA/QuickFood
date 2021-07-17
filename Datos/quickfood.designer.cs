@@ -128,11 +128,7 @@ namespace QuickFood.Datos
 		
 		private string _cltNombre;
 		
-<<<<<<< HEAD
-		private System.Nullable<decimal> _pltPrecio;
-=======
 		private string _cltTelefono;
->>>>>>> bb2f69cfbd9c0cecb4c09413b37b46cce23e68fb
 		
 		private string _cltDireccion;
 		
@@ -144,14 +140,6 @@ namespace QuickFood.Datos
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
-<<<<<<< HEAD
-    partial void OnpltIdChanging(int value);
-    partial void OnpltIdChanged();
-    partial void OnpltDescripcionChanging(string value);
-    partial void OnpltDescripcionChanged();
-    partial void OnpltPrecioChanging(System.Nullable<decimal> value);
-    partial void OnpltPrecioChanged();
-=======
     partial void OncltIdChanging(int value);
     partial void OncltIdChanged();
     partial void OncltNombreChanging(string value);
@@ -162,7 +150,6 @@ namespace QuickFood.Datos
     partial void OncltDireccionChanged();
     partial void OncltIdentificacionChanging(string value);
     partial void OncltIdentificacionChanged();
->>>>>>> bb2f69cfbd9c0cecb4c09413b37b46cce23e68fb
     #endregion
 		
 		public cliente()
@@ -211,24 +198,6 @@ namespace QuickFood.Datos
 			}
 		}
 		
-<<<<<<< HEAD
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_pltPrecio", DbType="Decimal(18,2)")]
-		public System.Nullable<decimal> pltPrecio
-		{
-			get
-			{
-				return this._pltPrecio;
-			}
-			set
-			{
-				if ((this._pltPrecio != value))
-				{
-					this.OnpltPrecioChanging(value);
-					this.SendPropertyChanging();
-					this._pltPrecio = value;
-					this.SendPropertyChanged("pltPrecio");
-					this.OnpltPrecioChanged();
-=======
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_cltTelefono", DbType="VarChar(20)")]
 		public string cltTelefono
 		{
@@ -245,7 +214,6 @@ namespace QuickFood.Datos
 					this._cltTelefono = value;
 					this.SendPropertyChanged("cltTelefono");
 					this.OncltTelefonoChanged();
->>>>>>> bb2f69cfbd9c0cecb4c09413b37b46cce23e68fb
 				}
 			}
 		}
@@ -346,13 +314,7 @@ namespace QuickFood.Datos
 		
 		private string _msrNombre;
 		
-<<<<<<< HEAD
-		private System.Nullable<int> _pdeCantidad;
-		
-		private EntityRef<plato> _plato;
-=======
 		private string _msrIdentificacion;
->>>>>>> bb2f69cfbd9c0cecb4c09413b37b46cce23e68fb
 		
 		private EntitySet<pedido> _pedido;
 		
@@ -360,25 +322,12 @@ namespace QuickFood.Datos
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
-<<<<<<< HEAD
-    partial void OnpdeIdChanging(int value);
-    partial void OnpdeIdChanged();
-    partial void OnpdeDescripcionChanging(string value);
-    partial void OnpdeDescripcionChanged();
-    partial void OnpddIdChanging(System.Nullable<int> value);
-    partial void OnpddIdChanged();
-    partial void OnpltIdChanging(System.Nullable<int> value);
-    partial void OnpltIdChanged();
-    partial void OnpdeCantidadChanging(System.Nullable<int> value);
-    partial void OnpdeCantidadChanged();
-=======
     partial void OnmsrIdChanging(int value);
     partial void OnmsrIdChanged();
     partial void OnmsrNombreChanging(string value);
     partial void OnmsrNombreChanged();
     partial void OnmsrIdentificacionChanging(string value);
     partial void OnmsrIdentificacionChanged();
->>>>>>> bb2f69cfbd9c0cecb4c09413b37b46cce23e68fb
     #endregion
 		
 		public mesero()
@@ -436,81 +385,7 @@ namespace QuickFood.Datos
 			}
 			set
 			{
-<<<<<<< HEAD
-				if ((this._pddId != value))
-				{
-					if (this._pedido.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnpddIdChanging(value);
-					this.SendPropertyChanging();
-					this._pddId = value;
-					this.SendPropertyChanged("pddId");
-					this.OnpddIdChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_pltId", DbType="Int")]
-		public System.Nullable<int> pltId
-		{
-			get
-			{
-				return this._pltId;
-			}
-			set
-			{
-				if ((this._pltId != value))
-				{
-					if (this._plato.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnpltIdChanging(value);
-					this.SendPropertyChanging();
-					this._pltId = value;
-					this.SendPropertyChanged("pltId");
-					this.OnpltIdChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_pdeCantidad", DbType="Int")]
-		public System.Nullable<int> pdeCantidad
-		{
-			get
-			{
-				return this._pdeCantidad;
-			}
-			set
-			{
-				if ((this._pdeCantidad != value))
-				{
-					this.OnpdeCantidadChanging(value);
-					this.SendPropertyChanging();
-					this._pdeCantidad = value;
-					this.SendPropertyChanged("pdeCantidad");
-					this.OnpdeCantidadChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="plato_pedidodetalle", Storage="_plato", ThisKey="pltId", OtherKey="pltId", IsForeignKey=true)]
-		public plato plato
-		{
-			get
-			{
-				return this._plato.Entity;
-			}
-			set
-			{
-				plato previousValue = this._plato.Entity;
-				if (((previousValue != value) 
-							|| (this._plato.HasLoadedOrAssignedValue == false)))
-=======
 				if ((this._msrIdentificacion != value))
->>>>>>> bb2f69cfbd9c0cecb4c09413b37b46cce23e68fb
 				{
 					this.OnmsrIdentificacionChanging(value);
 					this.SendPropertyChanging();
@@ -584,11 +459,6 @@ namespace QuickFood.Datos
 		private System.Nullable<int> _msrId;
 		
 		private System.Nullable<decimal> _pddTotal;
-<<<<<<< HEAD
-		
-		private EntitySet<pedidodetalle> _pedidodetalle;
-=======
->>>>>>> bb2f69cfbd9c0cecb4c09413b37b46cce23e68fb
 		
 		private EntitySet<pedidodetalle> _pedidodetalle;
 		
