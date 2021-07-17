@@ -1,0 +1,11 @@
+C:\Users\ASUS\source\repos\QuickFood\bin\Debug\QuickFood.exe.config
+C:\Users\ASUS\source\repos\QuickFood\bin\Debug\QuickFood.exe
+C:\Users\ASUS\source\repos\QuickFood\bin\Debug\QuickFood.pdb
+C:\Users\ASUS\source\repos\QuickFood\obj\Debug\QuickFood.csproj.AssemblyReference.cache
+C:\Users\ASUS\source\repos\QuickFood\obj\Debug\QuickFood.Forms.FormCliente.resources
+C:\Users\ASUS\source\repos\QuickFood\obj\Debug\QuickFood.Forms.FrmPrincipal.resources
+C:\Users\ASUS\source\repos\QuickFood\obj\Debug\QuickFood.Properties.Resources.resources
+C:\Users\ASUS\source\repos\QuickFood\obj\Debug\QuickFood.csproj.GenerateResource.cache
+C:\Users\ASUS\source\repos\QuickFood\obj\Debug\QuickFood.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\source\repos\QuickFood\obj\Debug\QuickFood.exe
+C:\Users\ASUS\source\repos\QuickFood\obj\Debug\QuickFood.pdb
