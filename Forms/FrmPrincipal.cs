@@ -24,5 +24,11 @@ namespace QuickFood.Forms
             FormCliente fr = new FormCliente();
             fr.Show();
         }
+
+        private void crearPedidoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormPedido frm = new FormPedido();
+            frm.Show();
+        }
     }
 }

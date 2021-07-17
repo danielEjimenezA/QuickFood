@@ -4,7 +4,7 @@
     <Type Name="plato">
       <Column Name="pltId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="pltDescripcion" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
-      <Column Name="pltEstado" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="pltPrecio" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
       <Association Name="plato_pedidodetalle" Member="pedidodetalle" ThisKey="pltId" OtherKey="pltId" Type="pedidodetalle" />
     </Type>
   </Table>
@@ -14,6 +14,7 @@
       <Column Name="pdeDescripcion" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
       <Column Name="pddId" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="pltId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="pdeCantidad" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Association Name="plato_pedidodetalle" Member="plato" ThisKey="pltId" OtherKey="pltId" Type="plato" IsForeignKey="true" />
       <Association Name="pedido_pedidodetalle" Member="pedido" ThisKey="pddId" OtherKey="pddId" Type="pedido" IsForeignKey="true" />
     </Type>
@@ -25,6 +26,7 @@
       <Column Name="pddEstado" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
       <Column Name="cltId" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="msrId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="pddTotal" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
       <Association Name="pedido_pedidodetalle" Member="pedidodetalle" ThisKey="pddId" OtherKey="pddId" Type="pedidodetalle" />
       <Association Name="mesero_pedido" Member="mesero" ThisKey="msrId" OtherKey="msrId" Type="mesero" IsForeignKey="true" />
       <Association Name="cliente_pedido" Member="cliente" ThisKey="cltId" OtherKey="cltId" Type="cliente" IsForeignKey="true" />

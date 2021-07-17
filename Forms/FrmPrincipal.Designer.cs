@@ -36,6 +36,8 @@ namespace QuickFood.Forms
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.clienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.crearClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pedidoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.crearPedidoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -60,7 +62,8 @@ namespace QuickFood.Forms
             // menuStrip2
             // 
             this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.clienteToolStripMenuItem});
+            this.clienteToolStripMenuItem,
+            this.pedidoToolStripMenuItem});
             this.menuStrip2.Location = new System.Drawing.Point(0, 0);
             this.menuStrip2.Name = "menuStrip2";
             this.menuStrip2.Size = new System.Drawing.Size(800, 24);
@@ -81,6 +84,21 @@ namespace QuickFood.Forms
             this.crearClienteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.crearClienteToolStripMenuItem.Text = "Crear Cliente";
             this.crearClienteToolStripMenuItem.Click += new System.EventHandler(this.crearClienteToolStripMenuItem_Click);
+            // 
+            // pedidoToolStripMenuItem
+            // 
+            this.pedidoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.crearPedidoToolStripMenuItem});
+            this.pedidoToolStripMenuItem.Name = "pedidoToolStripMenuItem";
+            this.pedidoToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
+            this.pedidoToolStripMenuItem.Text = "Pedido";
+            // 
+            // crearPedidoToolStripMenuItem
+            // 
+            this.crearPedidoToolStripMenuItem.Name = "crearPedidoToolStripMenuItem";
+            this.crearPedidoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.crearPedidoToolStripMenuItem.Text = "Crear Pedido";
+            this.crearPedidoToolStripMenuItem.Click += new System.EventHandler(this.crearPedidoToolStripMenuItem_Click);
             // 
             // FrmPrincipal
             // 
@@ -107,5 +125,7 @@ namespace QuickFood.Forms
         private System.Windows.Forms.MenuStrip menuStrip2;
         private System.Windows.Forms.ToolStripMenuItem clienteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem crearClienteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pedidoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem crearPedidoToolStripMenuItem;
     }
 }
