@@ -17,5 +17,11 @@ namespace QuickFood.Forms
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FrmPlatoCRUD frmph = new FrmPlatoCRUD();
+            frmph.Show();
+        }
     }
 }

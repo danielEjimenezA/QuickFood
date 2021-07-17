@@ -33,5 +33,25 @@ namespace QuickFood.Properties {
                 return ((string)(this["quickFoodDBConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-8Q269HQ;Initial Catalog=quickFoodDB;Integrated Security=True")]
+        public string quickFoodDBConnectionString1 {
+            get {
+                return ((string)(this["quickFoodDBConnectionString1"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=localhost;Initial Catalog=quickFoodDB;Integrated Security=True")]
+        public string quickFoodDBConnectionString2 {
+            get {
+                return ((string)(this["quickFoodDBConnectionString2"]));
+            }
+        }
     }
 }

@@ -59,14 +59,49 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>quickfood.dbml</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FrmPedidoHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmPedidoHistory.Designer.cs">
+      <DependentUpon>FrmPedidoHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmPlatoCRUD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmPlatoCRUD.Designer.cs">
+      <DependentUpon>FrmPlatoCRUD.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FrmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\FrmPrincipal.Designer.cs">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FrmMeseroCRUD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmMeseroCRUD.Designer.cs">
+      <DependentUpon>FrmMeseroCRUD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\Mesero.cs" />
+    <Compile Include="Modelo\Plato.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="Datos\quickfood.dbml.layout">
+      <DependentUpon>quickfood.dbml</DependentUpon>
+    </None>
+    <EmbeddedResource Include="Forms\FrmMeseroCRUD.resx">
+      <DependentUpon>FrmMeseroCRUD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmPedidoHistory.resx">
+      <DependentUpon>FrmPedidoHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmPlatoCRUD.resx">
+      <DependentUpon>FrmPlatoCRUD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmPrincipal.resx">
+      <DependentUpon>FrmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -80,9 +115,6 @@
       <Generator>MSLinqToSQLGenerator</Generator>
       <LastGenOutput>quickfood.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
-    </None>
-    <None Include="Datos\quickfood.dbml.layout">
-      <DependentUpon>quickfood.dbml</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
