@@ -59,6 +59,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>quickfood.dbml</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="Forms\FrmPedidoHistory.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,6 +71,13 @@
     </Compile>
     <Compile Include="Forms\FrmPlatoCRUD.Designer.cs">
       <DependentUpon>FrmPlatoCRUD.cs</DependentUpon>
+=======
+    <Compile Include="Forms\FormCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormCliente.Designer.cs">
+      <DependentUpon>FormCliente.cs</DependentUpon>
+>>>>>>> 1348ff57058bd6c6d227273348718df68850919c
     </Compile>
     <Compile Include="Forms\FrmPrincipal.cs">
       <SubType>Form</SubType>
@@ -87,6 +95,7 @@
     <Compile Include="Modelo\Plato.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+<<<<<<< HEAD
     <None Include="Datos\quickfood.dbml.layout">
       <DependentUpon>quickfood.dbml</DependentUpon>
     </None>
@@ -98,6 +107,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmPlatoCRUD.resx">
       <DependentUpon>FrmPlatoCRUD.cs</DependentUpon>
+=======
+    <EmbeddedResource Include="Forms\FormCliente.resx">
+      <DependentUpon>FormCliente.cs</DependentUpon>
+>>>>>>> 1348ff57058bd6c6d227273348718df68850919c
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>

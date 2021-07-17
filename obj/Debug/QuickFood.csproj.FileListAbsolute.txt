@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 C:\Users\danie\Documents\UIsrael\SEPTIMO\Plataformas De Desarrollo I\Projects\QuickFood\obj\Debug\QuickFood.csproj.AssemblyReference.cache
 C:\Users\danie\Documents\UIsrael\SEPTIMO\Plataformas De Desarrollo I\Projects\QuickFood\obj\Debug\QuickFood.Forms.FrmMeseroCRUD.resources
 C:\Users\danie\Documents\UIsrael\SEPTIMO\Plataformas De Desarrollo I\Projects\QuickFood\obj\Debug\QuickFood.Properties.Resources.resources
@@ -11,3 +12,16 @@ C:\Users\danie\Documents\UIsrael\SEPTIMO\Plataformas De Desarrollo I\Projects\Qu
 C:\Users\danie\Documents\UIsrael\SEPTIMO\Plataformas De Desarrollo I\Projects\QuickFood\obj\Debug\QuickFood.Forms.FrmPrincipal.resources
 C:\Users\danie\Documents\UIsrael\SEPTIMO\Plataformas De Desarrollo I\Projects\QuickFood\obj\Debug\QuickFood.Forms.FrmPlatoCRUD.resources
 C:\Users\danie\Documents\UIsrael\SEPTIMO\Plataformas De Desarrollo I\Projects\QuickFood\obj\Debug\QuickFood.Forms.FrmPedidoHistory.resources
+=======
+C:\Users\ASUS\source\repos\QuickFood\bin\Debug\QuickFood.exe.config
+C:\Users\ASUS\source\repos\QuickFood\bin\Debug\QuickFood.exe
+C:\Users\ASUS\source\repos\QuickFood\bin\Debug\QuickFood.pdb
+C:\Users\ASUS\source\repos\QuickFood\obj\Debug\QuickFood.csproj.AssemblyReference.cache
+C:\Users\ASUS\source\repos\QuickFood\obj\Debug\QuickFood.Forms.FormCliente.resources
+C:\Users\ASUS\source\repos\QuickFood\obj\Debug\QuickFood.Forms.FrmPrincipal.resources
+C:\Users\ASUS\source\repos\QuickFood\obj\Debug\QuickFood.Properties.Resources.resources
+C:\Users\ASUS\source\repos\QuickFood\obj\Debug\QuickFood.csproj.GenerateResource.cache
+C:\Users\ASUS\source\repos\QuickFood\obj\Debug\QuickFood.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\source\repos\QuickFood\obj\Debug\QuickFood.exe
+C:\Users\ASUS\source\repos\QuickFood\obj\Debug\QuickFood.pdb
+>>>>>>> 1348ff57058bd6c6d227273348718df68850919c
