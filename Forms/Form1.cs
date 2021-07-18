@@ -117,5 +117,10 @@ namespace QuickFood.Forms
             if (panelContenedor.Controls.Count > 0)
                 panelContenedor.Controls.RemoveAt(0);
         }
+
+        private void btnReportes_Click(object sender, EventArgs e)
+        {
+            abrirFormHija(new FormCaja());
+        }
     }
 }

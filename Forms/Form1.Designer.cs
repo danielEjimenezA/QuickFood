@@ -189,6 +189,7 @@
             this.btnReportes.TabIndex = 13;
             this.btnReportes.Text = "Caja";
             this.btnReportes.UseVisualStyleBackColor = false;
+            this.btnReportes.Click += new System.EventHandler(this.btnReportes_Click);
             // 
             // panel6
             // 
