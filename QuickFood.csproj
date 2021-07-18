@@ -173,8 +173,6 @@
     <Content Include="imagenes\compras.png" />
     <Content Include="imagenes\empleados.png" />
     <None Include="imagenes\logo.jpg" />
-    <Content Include="imagenes\logo.png" />
-    <Content Include="imagenes\LOGOS.png" />
     <Content Include="imagenes\maxi.png" />
     <Content Include="imagenes\minimazar.png" />
     <Content Include="imagenes\pagos.png" />
