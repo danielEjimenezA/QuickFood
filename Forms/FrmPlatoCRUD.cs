@@ -51,15 +51,7 @@ namespace QuickFood.Forms
                 selectPlato.pltId = idPlato;
                 selectPlato.pltDescripcion = txtDescripcion.Text;
                 selectPlato.pltPrecio = decimal.Parse(txtPrecio.Text);
-                if (cbxEstado.Text.Equals("Activo"))
-                {
-                    selectPlato.pltEstado = 'A';
-                }
-                else
-                {
-                    selectPlato.pltEstado = 'I';
-
-                }
+               
                 clsPlato.update(selectPlato);
                 toListPlatos();
                 MessageBox.Show("Plato actualizado correctamente");
@@ -99,14 +91,7 @@ namespace QuickFood.Forms
             plato newPlato = new plato();
             newPlato.pltDescripcion = txtDescripcion.Text;
             newPlato.pltPrecio = decimal.Parse(txtPrecio.Text);
-            if (cbxEstado.Text.Equals("Activo"))
-            {
-                newPlato.pltEstado = 'A';
-            }
-            else
-            {
-                newPlato.pltEstado = 'I';
-            }
+            
 
             clsPlato.create(newPlato);
             MessageBox.Show("Plato ingresado correctamente");
@@ -117,13 +102,7 @@ namespace QuickFood.Forms
             plato platoSelect = clsPlato.obtener(id);
             txtDescripcion.Text = platoSelect.pltDescripcion;
             txtPrecio.Text = platoSelect.pltPrecio.ToString();
-            if (platoSelect.pltEstado.Equals('A')){
-                cbxEstado.Text = "Activo";
-            }
-            else
-            {
-                cbxEstado.Text = "Inactivo";
-            }
+           
         }
     }
 }

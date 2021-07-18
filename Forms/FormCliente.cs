@@ -14,10 +14,13 @@ namespace QuickFood.Forms
     public partial class FormCliente : Form
     {
         quickfoodDataContext db = new quickfoodDataContext();
+        cliente cli = new cliente();
+        int idCliente = 0;
+
         public FormCliente()
         {
-
             InitializeComponent();
+            mostrar();
         }
 
         public void limpiar()
@@ -26,21 +29,38 @@ namespace QuickFood.Forms
             textBox2.Text = "";
             textBox3.Text = "";
             textBox4.Text = "";
+            idCliente = 0;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             try
             {
-                cliente cli = new cliente();
-                cli.cltNombre = textBox1.Text;
-                cli.cltIdentificacion = textBox2.Text;
-                cli.cltDireccion = textBox3.Text;
-                cli.cltTelefono = textBox4.Text;
-                db.cliente.InsertOnSubmit(cli);
-                db.SubmitChanges();
-                limpiar();
-                MessageBox.Show("Se guardo correctamente.", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if(idCliente == 0)
+                {
+                    cliente cli = new cliente();
+                    cli.cltNombre = textBox1.Text;
+                    cli.cltIdentificacion = textBox2.Text;
+                    cli.cltDireccion = textBox3.Text;
+                    cli.cltTelefono = textBox4.Text;
+                    db.cliente.InsertOnSubmit(cli);
+                    db.SubmitChanges();
+                    limpiar();
+                    mostrar();
+                    MessageBox.Show("Se guardo correctamente.", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    cli.cltNombre = textBox1.Text;
+                    cli.cltIdentificacion = textBox2.Text;
+                    cli.cltDireccion = textBox3.Text;
+                    cli.cltTelefono = textBox4.Text;
+                    db.SubmitChanges();
+                    limpiar();
+                    mostrar();
+                    MessageBox.Show("Se actualizo correctamente.", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+               
             }
             catch (Exception)
             {
@@ -50,6 +70,13 @@ namespace QuickFood.Forms
 
         }
 
+
+        public void mostrar()
+        {
+            dataGridView1.AutoGenerateColumns = false;
+            dataGridView1.DataSource = null;
+            dataGridView1.DataSource = db.cliente.ToArray();
+        }
 
         private void txtNumero_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -79,6 +106,61 @@ namespace QuickFood.Forms
                 e.Handled = true;
                 return;
             }
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+
+        public void obtener(int id)
+        {
+            cli = db.cliente.First(x => x.cltId == id);
+
+            textBox1.Text = cli.cltNombre;
+            textBox2.Text = cli.cltIdentificacion;
+            textBox3.Text = cli.cltDireccion;
+            textBox4.Text = cli.cltTelefono;
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                if (row.Index == e.RowIndex)
+                {
+                    idCliente = int.Parse(row.Cells[0].Value.ToString());
+                    obtener(idCliente);
+                }
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (idCliente != 0)
+            {
+                obtener(idCliente);
+                db.cliente.DeleteOnSubmit(cli);
+                db.SubmitChanges();
+                mostrar();
+                limpiar();
+                MessageBox.Show("Se elimino correctamente.", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Seleccione un cliente .", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            limpiar();
         }
     }
 }

@@ -31,6 +31,14 @@
       <Association Name="mesero_pedido" Member="mesero" ThisKey="msrId" OtherKey="msrId" Type="mesero" IsForeignKey="true" />
     </Type>
   </Table>
+  <Table Name="dbo.plato" Member="plato">
+    <Type Name="plato">
+      <Column Name="pltId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="pltDescripcion" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="pltPrecio" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Association Name="plato_pedidodetalle" Member="pedidodetalle" ThisKey="pltId" OtherKey="pltId" Type="pedidodetalle" />
+    </Type>
+  </Table>
   <Table Name="dbo.pedidodetalle" Member="pedidodetalle">
     <Type Name="pedidodetalle">
       <Column Name="pdeId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -38,16 +46,9 @@
       <Column Name="pddId" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="pltId" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="pdeCantidad" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="pdeTotalDetalle" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
       <Association Name="pedido_pedidodetalle" Member="pedido" ThisKey="pddId" OtherKey="pddId" Type="pedido" IsForeignKey="true" />
       <Association Name="plato_pedidodetalle" Member="plato" ThisKey="pltId" OtherKey="pltId" Type="plato" IsForeignKey="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.plato" Member="plato">
-    <Type Name="plato">
-      <Column Name="pltId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="pltDescripcion" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
-      <Column Name="pltPrecio" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
-      <Association Name="plato_pedidodetalle" Member="pedidodetalle" ThisKey="pltId" OtherKey="pltId" Type="pedidodetalle" />
     </Type>
   </Table>
 </Database>

@@ -28,7 +28,6 @@ namespace QuickFood.Modelo
             plato updatePlato = db.plato.Single(r => r.pltId == newPlato.pltId);
 
             updatePlato.pltDescripcion = newPlato.pltDescripcion;
-            updatePlato.pltEstado = newPlato.pltEstado;
 
             db.SubmitChanges();
         }

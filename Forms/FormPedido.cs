@@ -1,4 +1,5 @@
 ﻿using QuickFood.Datos;
+using QuickFood.Modelo;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -69,22 +70,72 @@ namespace QuickFood.Forms
 
         private void button2_Click(object sender, EventArgs e)
         {
-            pedidodetalle p = new pedidodetalle();
-            p.pdeDescripcion = textBox2.Text;
-            p.plato = (plato)comboBox3.SelectedItem;
-            p.pdeCantidad = int.Parse(textBox1.Text);
-
-            listaPedidosDetalleMemoria.Add(p);
-
-            mostrarDetalle();
+            if (textBox1.Text.Equals("") || textBox1.Text == null || comboBox3.SelectedItem == null )
+            {
+                MessageBox.Show("Campos requeridos.", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                plato pl = (plato)comboBox3.SelectedItem;
+                pedidodetalle p = new pedidodetalle();
+                p.pdeCantidad = int.Parse(textBox1.Text);
+                p.pdeDescripcion = pl.pltDescripcion;
+                p.pdeTotalDetalle = pl.pltPrecio * p.pdeCantidad;
+                p.plato = pl;
+                listaPedidosDetalleMemoria.Add(p);
+                mostrarDetalle();
+                MessageBox.Show("Detalle Agregado.", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+           
         }
 
         public void mostrarDetalle()
         {
-            dataGridView1.DataSource = null;
             dataGridView1.AutoGenerateColumns = false;
+            dataGridView1.DataSource = null;
             dataGridView1.DataSource = listaPedidosDetalleMemoria;
-            dataGridView1.Visible = true;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+                decimal? valorT = 0;
+                foreach (pedidodetalle itm in listaPedidosDetalleMemoria)
+                {
+                    valorT = valorT + itm.pdeTotalDetalle;
+                }
+                pedido pedido = new pedido();
+                pedido.cliente = (cliente)comboBox2.SelectedItem;
+                pedido.mesero = (mesero)comboBox1.SelectedItem;
+                pedido.pddFecha = DateTime.Now;
+                pedido.pddEstado = "PENDIENTE";
+                pedido.pddTotal = valorT;
+
+                db.pedido.InsertOnSubmit(pedido);
+
+                db.SubmitChanges();
+
+                pedido pedidoGuardado = db.pedido.First(x => x.pddId == pedido.pddId);
+
+                foreach (pedidodetalle itm in listaPedidosDetalleMemoria)
+                {
+                    itm.pddId = pedidoGuardado.pddId;
+
+                }
+
+                db.SubmitChanges();
+
+                MessageBox.Show("Pedido Realizado.", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("El pedido fallo.", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+           
+
         }
     }
 }
