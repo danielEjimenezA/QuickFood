@@ -111,5 +111,11 @@ namespace QuickFood.Forms
         {
             abrirFormHija(new FormCocina());
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            if (panelContenedor.Controls.Count > 0)
+                panelContenedor.Controls.RemoveAt(0);
+        }
     }
 }

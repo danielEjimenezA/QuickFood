@@ -48,7 +48,7 @@ namespace QuickFood.Forms
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(33, 9);
+            this.label1.Location = new System.Drawing.Point(79, 19);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(230, 31);
             this.label1.TabIndex = 14;
@@ -58,16 +58,17 @@ namespace QuickFood.Forms
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.Beige;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Numero,
             this.Tiempo});
-            this.dataGridView1.Location = new System.Drawing.Point(24, 55);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 73);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(243, 318);
+            this.dataGridView1.Size = new System.Drawing.Size(443, 332);
             this.dataGridView1.TabIndex = 15;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
@@ -89,7 +90,7 @@ namespace QuickFood.Forms
             // 
             this.button1.BackColor = System.Drawing.Color.LightGreen;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(407, 299);
+            this.button1.Location = new System.Drawing.Point(611, 327);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(228, 46);
             this.button1.TabIndex = 16;
@@ -101,16 +102,17 @@ namespace QuickFood.Forms
             // 
             this.dataGridView2.AllowUserToAddRows = false;
             this.dataGridView2.AllowUserToDeleteRows = false;
+            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView2.BackgroundColor = System.Drawing.Color.Beige;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
             this.Cantidad,
             this.Plato});
-            this.dataGridView2.Location = new System.Drawing.Point(346, 55);
+            this.dataGridView2.Location = new System.Drawing.Point(522, 73);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
-            this.dataGridView2.Size = new System.Drawing.Size(349, 220);
+            this.dataGridView2.Size = new System.Drawing.Size(496, 220);
             this.dataGridView2.TabIndex = 17;
             // 
             // ID
@@ -138,7 +140,7 @@ namespace QuickFood.Forms
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(391, 9);
+            this.label2.Location = new System.Drawing.Point(576, 19);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(244, 31);
             this.label2.TabIndex = 18;
@@ -148,7 +150,7 @@ namespace QuickFood.Forms
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.Crimson;
-            this.button2.Location = new System.Drawing.Point(407, 362);
+            this.button2.Location = new System.Drawing.Point(611, 396);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(228, 46);
             this.button2.TabIndex = 19;
@@ -160,8 +162,8 @@ namespace QuickFood.Forms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.CadetBlue;
+            this.ClientSize = new System.Drawing.Size(1094, 521);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dataGridView2);

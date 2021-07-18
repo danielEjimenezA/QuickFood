@@ -77,7 +77,7 @@ namespace QuickFood.Forms
             // dataGridView1
             // 
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.AntiqueWhite;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.cltNombre,
@@ -85,7 +85,7 @@ namespace QuickFood.Forms
             this.pddFecha,
             this.pddTotal,
             this.pddEstado});
-            this.dataGridView1.Location = new System.Drawing.Point(15, 119);
+            this.dataGridView1.Location = new System.Drawing.Point(137, 166);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(773, 319);
             this.dataGridView1.TabIndex = 6;
@@ -123,7 +123,7 @@ namespace QuickFood.Forms
             // btnBuscar
             // 
             this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(464, 12);
+            this.btnBuscar.Location = new System.Drawing.Point(646, 35);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(204, 40);
             this.btnBuscar.TabIndex = 7;
@@ -174,7 +174,7 @@ namespace QuickFood.Forms
             // 
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.dateTimePicker1);
-            this.panel1.Location = new System.Drawing.Point(15, 63);
+            this.panel1.Location = new System.Drawing.Point(197, 86);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(350, 35);
             this.panel1.TabIndex = 11;
@@ -183,7 +183,7 @@ namespace QuickFood.Forms
             // 
             this.panel2.Controls.Add(this.cbxCliente);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Location = new System.Drawing.Point(15, 63);
+            this.panel2.Location = new System.Drawing.Point(197, 86);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(350, 34);
             this.panel2.TabIndex = 12;
@@ -210,7 +210,7 @@ namespace QuickFood.Forms
             // 
             this.panel3.Controls.Add(this.cbxMesero);
             this.panel3.Controls.Add(this.label3);
-            this.panel3.Location = new System.Drawing.Point(15, 63);
+            this.panel3.Location = new System.Drawing.Point(197, 86);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(350, 34);
             this.panel3.TabIndex = 13;
@@ -238,7 +238,7 @@ namespace QuickFood.Forms
             this.panel4.Controls.Add(this.rbtFecha);
             this.panel4.Controls.Add(this.rbtCliente);
             this.panel4.Controls.Add(this.rbtMesero);
-            this.panel4.Location = new System.Drawing.Point(32, 11);
+            this.panel4.Location = new System.Drawing.Point(214, 34);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(316, 46);
             this.panel4.TabIndex = 12;
@@ -246,7 +246,7 @@ namespace QuickFood.Forms
             // btnLimpiar
             // 
             this.btnLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpiar.Location = new System.Drawing.Point(464, 62);
+            this.btnLimpiar.Location = new System.Drawing.Point(646, 85);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(204, 40);
             this.btnLimpiar.TabIndex = 14;
@@ -258,8 +258,8 @@ namespace QuickFood.Forms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.CadetBlue;
+            this.ClientSize = new System.Drawing.Size(1081, 547);
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
