@@ -2,62 +2,62 @@
 <ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="quickfood">
   <DataContextMoniker Name="/quickfoodDataContext" />
   <nestedChildShapes>
-    <classShape Id="2ebc8f41-6846-4619-bc46-ce199d5186b5" absoluteBounds="0.75, 4, 2, 1.7708968098958327">
+    <classShape Id="a2a648e2-3016-4637-be12-66eb028dbf49" absoluteBounds="0.75, 4, 2, 1.7708968098958327">
       <DataClassMoniker Name="/quickfoodDataContext/cliente" />
       <nestedChildShapes>
-        <elementListCompartment Id="7870f5e7-04e6-486a-b073-8920def700a3" absoluteBounds="0.765, 4.46, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="9d175ce3-98d6-4eba-9f4d-3f49cb1de007" absoluteBounds="0.765, 4.46, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="70ce43b9-87f3-44a4-aacd-2b39dbeb8e2d" absoluteBounds="0.75, 1.25, 2, 1.3862939453125">
+    <classShape Id="a7caa1f8-580d-41bd-a69e-cfd02ac7abf1" absoluteBounds="0.75, 1.25, 2, 1.3862939453125">
       <DataClassMoniker Name="/quickfoodDataContext/mesero" />
       <nestedChildShapes>
-        <elementListCompartment Id="e010e6bc-ee5d-4a9e-8a73-7b92074376f0" absoluteBounds="0.765, 1.71, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="af551dff-3070-4514-acf5-cd8c056fd322" absoluteBounds="0.765, 1.71, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="4fe07b75-ed4c-4cdf-8260-7c33512e59d5" absoluteBounds="3.5, 0.875, 2, 1.9631982421875">
+    <classShape Id="db4175d7-f97c-495f-a643-7e189dfb703c" absoluteBounds="3.5, 0.875, 2, 1.9631982421875">
       <DataClassMoniker Name="/quickfoodDataContext/pedido" />
       <nestedChildShapes>
-        <elementListCompartment Id="99477608-bae1-4766-bbb5-c085835ac8b2" absoluteBounds="3.515, 1.335, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="d8603978-1731-4c7e-b92f-927fcaf3a739" absoluteBounds="3.515, 1.335, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="8caecdee-a4cb-47d7-8656-1118c6e44b9b" absoluteBounds="6.25, 1, 2, 1.7708968098958331">
+    <classShape Id="b1f227ab-858f-4295-a365-910232e461b6" absoluteBounds="6.25, 0.875, 2, 1.9631982421875">
       <DataClassMoniker Name="/quickfoodDataContext/pedidodetalle" />
       <nestedChildShapes>
-        <elementListCompartment Id="00fd85fa-ba64-44ff-9b4e-d65fba26cb2f" absoluteBounds="6.265, 1.46, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="b583bf73-dc49-4cd7-bc94-e49994e37b85" absoluteBounds="6.265, 1.335, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="2d671963-6455-48c6-bc67-17d62e9309ea" absoluteBounds="3.5, 4.125, 2, 1.5785953776041666">
+    <classShape Id="f1beed2c-986e-4cc0-b50b-84580f799ffa" absoluteBounds="3.5, 4.125, 2, 1.5785953776041666">
       <DataClassMoniker Name="/quickfoodDataContext/plato" />
       <nestedChildShapes>
-        <elementListCompartment Id="5d60606e-a0b0-4c15-bfa6-7129454f9a54" absoluteBounds="3.515, 4.585, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="32f05a38-2327-42d8-9268-6307635df859" absoluteBounds="3.515, 4.585, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
     <associationConnector edgePoints="[(2.75 : 4); (3.125 : 3.625); (3.125 : 1.85659912109375); (3.5 : 1.85659912109375)]" fixedFrom="NotFixed" fixedTo="Algorithm">
       <AssociationMoniker Name="/quickfoodDataContext/cliente/cliente_pedido" />
       <nodes>
-        <classShapeMoniker Id="2ebc8f41-6846-4619-bc46-ce199d5186b5" />
-        <classShapeMoniker Id="4fe07b75-ed4c-4cdf-8260-7c33512e59d5" />
+        <classShapeMoniker Id="a2a648e2-3016-4637-be12-66eb028dbf49" />
+        <classShapeMoniker Id="db4175d7-f97c-495f-a643-7e189dfb703c" />
       </nodes>
     </associationConnector>
     <associationConnector edgePoints="[(2.75 : 2.30894653320312); (3.04166666666667 : 2.30894653320312 : JumpStart); (3.20833333333333 : 2.30894653320312 : JumpEnd); (3.5 : 2.30894653320312)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/quickfoodDataContext/mesero/mesero_pedido" />
       <nodes>
-        <classShapeMoniker Id="70ce43b9-87f3-44a4-aacd-2b39dbeb8e2d" />
-        <classShapeMoniker Id="4fe07b75-ed4c-4cdf-8260-7c33512e59d5" />
+        <classShapeMoniker Id="a7caa1f8-580d-41bd-a69e-cfd02ac7abf1" />
+        <classShapeMoniker Id="db4175d7-f97c-495f-a643-7e189dfb703c" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(5.5 : 1.88544840494792); (6.25 : 1.88544840494792)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(5.5 : 1.85659912109375); (6.25 : 1.85659912109375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/quickfoodDataContext/pedido/pedido_pedidodetalle" />
       <nodes>
-        <classShapeMoniker Id="4fe07b75-ed4c-4cdf-8260-7c33512e59d5" />
-        <classShapeMoniker Id="8caecdee-a4cb-47d7-8656-1118c6e44b9b" />
+        <classShapeMoniker Id="db4175d7-f97c-495f-a643-7e189dfb703c" />
+        <classShapeMoniker Id="b1f227ab-858f-4295-a365-910232e461b6" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(5.5 : 4.91429768880208); (7.25 : 4.91429768880208); (7.25 : 2.77089680989583)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(5.5 : 4.91429768880208); (7.25 : 4.91429768880208); (7.25 : 2.8381982421875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/quickfoodDataContext/plato/plato_pedidodetalle" />
       <nodes>
-        <classShapeMoniker Id="2d671963-6455-48c6-bc67-17d62e9309ea" />
-        <classShapeMoniker Id="8caecdee-a4cb-47d7-8656-1118c6e44b9b" />
+        <classShapeMoniker Id="f1beed2c-986e-4cc0-b50b-84580f799ffa" />
+        <classShapeMoniker Id="b1f227ab-858f-4295-a365-910232e461b6" />
       </nodes>
     </associationConnector>
   </nestedChildShapes>

@@ -36,5 +36,33 @@ namespace QuickFood.Forms
             FormPedido frm = new FormPedido();
             frm.Show();
         }
+
+        private void clienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void historyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pedidosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmPedidoHistory frmph = new FrmPedidoHistory();
+            frmph.Show();
+        }
+
+        private void meseroToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmMeseroCRUD frmmmc = new FrmMeseroCRUD();
+            frmmmc.Show();
+        }
+
+        private void platoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmPlatoCRUD frmpc = new FrmPlatoCRUD();
+            frmpc.Show();
+        }
     }
 }

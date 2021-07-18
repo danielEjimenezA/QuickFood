@@ -750,6 +750,8 @@ namespace QuickFood.Datos
 		
 		private System.Nullable<int> _pdeCantidad;
 		
+		private System.Nullable<decimal> _pdeTotalDetalle;
+		
 		private EntityRef<pedido> _pedido;
 		
 		private EntityRef<plato> _plato;
@@ -768,6 +770,8 @@ namespace QuickFood.Datos
     partial void OnpltIdChanged();
     partial void OnpdeCantidadChanging(System.Nullable<int> value);
     partial void OnpdeCantidadChanged();
+    partial void OnpdeTotalDetalleChanging(System.Nullable<decimal> value);
+    partial void OnpdeTotalDetalleChanged();
     #endregion
 		
 		public pedidodetalle()
@@ -881,6 +885,26 @@ namespace QuickFood.Datos
 					this._pdeCantidad = value;
 					this.SendPropertyChanged("pdeCantidad");
 					this.OnpdeCantidadChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_pdeTotalDetalle", DbType="Decimal(18,2)")]
+		public System.Nullable<decimal> pdeTotalDetalle
+		{
+			get
+			{
+				return this._pdeTotalDetalle;
+			}
+			set
+			{
+				if ((this._pdeTotalDetalle != value))
+				{
+					this.OnpdeTotalDetalleChanging(value);
+					this.SendPropertyChanging();
+					this._pdeTotalDetalle = value;
+					this.SendPropertyChanged("pdeTotalDetalle");
+					this.OnpdeTotalDetalleChanged();
 				}
 			}
 		}

@@ -24,8 +24,8 @@ C:\Users\ASUS\source\repos\QuickFood\obj\Debug\QuickFood.csproj.GenerateResource
 C:\Users\ASUS\source\repos\QuickFood\obj\Debug\QuickFood.csproj.CoreCompileInputs.cache
 C:\Users\ASUS\source\repos\QuickFood\obj\Debug\QuickFood.exe
 C:\Users\ASUS\source\repos\QuickFood\obj\Debug\QuickFood.pdb
-<<<<<<< HEAD
 C:\Users\ASUS\source\repos\QuickFood\obj\Debug\QuickFood.Forms.FormPedido.resources
-=======
 >>>>>>> 1348ff57058bd6c6d227273348718df68850919c
 >>>>>>> bb2f69cfbd9c0cecb4c09413b37b46cce23e68fb
+C:\Users\danie\Documents\UIsrael\SEPTIMO\Plataformas De Desarrollo I\Projects\QuickFood\obj\Debug\QuickFood.Forms.FormCliente.resources
+C:\Users\danie\Documents\UIsrael\SEPTIMO\Plataformas De Desarrollo I\Projects\QuickFood\obj\Debug\QuickFood.Forms.FormPedido.resources
