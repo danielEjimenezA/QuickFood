@@ -267,6 +267,7 @@ namespace QuickFood.Forms
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.dataGridView1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmPedidoHistory";
             this.Text = "Pedidos History";
             this.Load += new System.EventHandler(this.FrmPedidoHistory_Load);

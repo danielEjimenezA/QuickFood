@@ -59,6 +59,18 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>quickfood.dbml</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormCocina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormCocina.Designer.cs">
+      <DependentUpon>FormCocina.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FrmPedidoHistory.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,12 +95,6 @@
     <Compile Include="Forms\FormPedido.Designer.cs">
       <DependentUpon>FormPedido.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmPrincipal.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\FrmPrincipal.Designer.cs">
-      <DependentUpon>FrmPrincipal.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\FrmMeseroCRUD.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +110,12 @@
     <None Include="Datos\quickfood.dbml.layout">
       <DependentUpon>quickfood.dbml</DependentUpon>
     </None>
+    <EmbeddedResource Include="Forms\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormCocina.resx">
+      <DependentUpon>FormCocina.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmMeseroCRUD.resx">
       <DependentUpon>FrmMeseroCRUD.cs</DependentUpon>
     </EmbeddedResource>
@@ -119,18 +131,11 @@
     <EmbeddedResource Include="Forms\FormPedido.resx">
       <DependentUpon>FormPedido.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmPrincipal.resx">
-      <DependentUpon>FrmPrincipal.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <None Include="Datos\quickfood.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
       <LastGenOutput>quickfood.designer.cs</LastGenOutput>
@@ -141,6 +146,11 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -150,10 +160,30 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="imagenes\cerrar.png" />
+    <Content Include="imagenes\clientes.png" />
+    <None Include="imagenes\comer %281%29.png" />
+    <None Include="imagenes\cocina.png" />
+    <None Include="imagenes\cocinero.png" />
+    <Content Include="imagenes\compras.png" />
+    <Content Include="imagenes\empleados.png" />
+    <None Include="imagenes\logo.jpg" />
+    <Content Include="imagenes\logo.png" />
+    <Content Include="imagenes\LOGOS.png" />
+    <Content Include="imagenes\maxi.png" />
+    <Content Include="imagenes\minimazar.png" />
+    <Content Include="imagenes\pagos.png" />
+    <Content Include="imagenes\producto.png" />
+    <Content Include="imagenes\producto2.png" />
+    <Content Include="imagenes\reportes.png" />
+    <Content Include="imagenes\res.png" />
+    <Content Include="imagenes\salir.png" />
+    <Content Include="imagenes\venta.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

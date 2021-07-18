@@ -40,15 +40,15 @@ namespace QuickFood.Forms
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Identificacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -169,6 +169,30 @@ namespace QuickFood.Forms
             this.panel1.TabIndex = 11;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.SystemColors.Control;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(78, 286);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(182, 37);
+            this.button3.TabIndex = 12;
+            this.button3.Text = "LIMPIAR";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.IndianRed;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(78, 243);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(182, 37);
+            this.button2.TabIndex = 11;
+            this.button2.Text = "ELIMINAR";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
@@ -225,18 +249,6 @@ namespace QuickFood.Forms
             this.Direccion.Name = "Direccion";
             this.Direccion.ReadOnly = true;
             // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.IndianRed;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(78, 243);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(182, 37);
-            this.button2.TabIndex = 11;
-            this.button2.Text = "ELIMINAR";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -246,18 +258,6 @@ namespace QuickFood.Forms
             this.label1.Size = new System.Drawing.Size(232, 31);
             this.label1.TabIndex = 13;
             this.label1.Text = "Lista de Clientes";
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.SystemColors.Control;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(78, 286);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(182, 37);
-            this.button3.TabIndex = 12;
-            this.button3.Text = "LIMPIAR";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // FormCliente
             // 
@@ -269,6 +269,7 @@ namespace QuickFood.Forms
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormCliente";
             this.Text = "FormCliente";
             this.panel1.ResumeLayout(false);

@@ -96,6 +96,13 @@ namespace QuickFood.Forms
             dataGridView1.DataSource = listaPedidosDetalleMemoria;
         }
 
+        public void limpiar()
+        {
+            listaPedidosDetalleMemoria.Clear();
+            mostrarDetalle();
+            textBox1.Text = "";
+        }
+
         private void button3_Click(object sender, EventArgs e)
         {
 
@@ -126,6 +133,8 @@ namespace QuickFood.Forms
                 }
 
                 db.SubmitChanges();
+
+                limpiar();
 
                 MessageBox.Show("Pedido Realizado.", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
