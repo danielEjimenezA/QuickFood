@@ -95,7 +95,9 @@
     <Compile Include="Forms\FrmMeseroCRUD.Designer.cs">
       <DependentUpon>FrmMeseroCRUD.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modelo\Cliente.cs" />
     <Compile Include="Modelo\Mesero.cs" />
+    <Compile Include="Modelo\Pedido.cs" />
     <Compile Include="Modelo\Plato.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
