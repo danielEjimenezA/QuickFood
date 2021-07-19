@@ -95,6 +95,12 @@
     <Compile Include="Forms\FormCocina.Designer.cs">
       <DependentUpon>FormCocina.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FrmEstadistica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmEstadistica.Designer.cs">
+      <DependentUpon>FrmEstadistica.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FrmPedidoHistory.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,6 +143,9 @@
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <EmbeddedResource Include="Forms\FrmEstadistica.resx">
+      <DependentUpon>FrmEstadistica.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reportes\ReportFactura.rdlc" />
     <None Include="Datos\quickfood.dbml.layout">
       <DependentUpon>quickfood.dbml</DependentUpon>

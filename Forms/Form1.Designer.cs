@@ -52,6 +52,8 @@
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelContenedor = new System.Windows.Forms.Panel();
+            this.btnEstadistica = new System.Windows.Forms.Button();
+            this.panel8 = new System.Windows.Forms.Panel();
             this.BarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
@@ -132,6 +134,8 @@
             // MenuVertical
             // 
             this.MenuVertical.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.MenuVertical.Controls.Add(this.panel8);
+            this.MenuVertical.Controls.Add(this.btnEstadistica);
             this.MenuVertical.Controls.Add(this.btnsalir);
             this.MenuVertical.Controls.Add(this.panel7);
             this.MenuVertical.Controls.Add(this.btnReportes);
@@ -368,6 +372,32 @@
             this.panelContenedor.TabIndex = 2;
             this.panelContenedor.Paint += new System.Windows.Forms.PaintEventHandler(this.panelContenedor_Paint);
             // 
+            // btnEstadistica
+            // 
+            this.btnEstadistica.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnEstadistica.FlatAppearance.BorderSize = 0;
+            this.btnEstadistica.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.btnEstadistica.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEstadistica.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEstadistica.ForeColor = System.Drawing.Color.White;
+            this.btnEstadistica.Image = ((System.Drawing.Image)(resources.GetObject("btnEstadistica.Image")));
+            this.btnEstadistica.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEstadistica.Location = new System.Drawing.Point(3, 400);
+            this.btnEstadistica.Name = "btnEstadistica";
+            this.btnEstadistica.Size = new System.Drawing.Size(217, 32);
+            this.btnEstadistica.TabIndex = 17;
+            this.btnEstadistica.Text = "Estadísticas";
+            this.btnEstadistica.UseVisualStyleBackColor = false;
+            this.btnEstadistica.Click += new System.EventHandler(this.btnEstadistica_Click);
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.panel8.Location = new System.Drawing.Point(0, 400);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(5, 32);
+            this.panel8.TabIndex = 15;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -417,6 +447,8 @@
         private System.Windows.Forms.PictureBox btnsalir;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Button btnReportes;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Button btnEstadistica;
     }
 }
 

@@ -122,5 +122,10 @@ namespace QuickFood.Forms
         {
             abrirFormHija(new FormCaja());
         }
+
+        private void btnEstadistica_Click(object sender, EventArgs e)
+        {
+            abrirFormHija(new FrmEstadistica());
+        }
     }
 }
